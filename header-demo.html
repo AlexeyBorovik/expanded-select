@@ -1,0 +1,34 @@
+<html>
+<header>
+  <title>Header Demo</title>
+  <meta charset="utf-8" />
+  <link href="styles/common.css" rel="stylesheet" />
+  <link href="styles/header.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>  
+  <script src="dist/all.js"></script>
+</header>
+
+<body>
+  <div class="header-empty"></div>
+  <div class="header-selected"></div> 
+  <script>
+    require(["build-header"], function (m) {
+      const headerEmpty = m.buildHeader({
+        container: document.querySelector(".header-empty"),
+        caption: "Шапка пустая",
+        onShow: () => console.log("onShow header-empty"),
+      });
+      headerEmpty.setValue("Текст");
+      headerEmpty.setSelectedCount(0);
+
+      const headerSelected = m.buildHeader({
+        container: document.querySelector(".header-selected"),
+        caption: "Шапка заполненая",
+        onShow: () => console.log("onShow header-selected"),
+      });
+      headerSelected.setValue("Текст");
+      headerSelected.setSelectedCount(5);
+    })
+  </script>
+</body>
+</html>

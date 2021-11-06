@@ -1,0 +1,32 @@
+.header {
+    margin-bottom: 16px;
+}
+
+.header-headline {
+    display: flex;
+    margin-left: 22px;
+    margin-top: 17px;
+    margin-right: 23px;
+    justify-content: space-between;
+}
+
+.header-show-link {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: #035B77;
+    margin-top: auto;
+    display: none;
+    cursor: pointer;
+}
+
+.header.selected .header-show-link {
+    display: block;
+}
+
+.header.selected .input {
+    border-left: 2px solid #035B77;
+    opacity: 1;
+}
