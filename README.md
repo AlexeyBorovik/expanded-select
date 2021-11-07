@@ -1,3 +1,5 @@
+Demo: https://robxela.github.io/expanded-select
+
 To work with project you need to install typescript:
 > npm install -g typescript
 
