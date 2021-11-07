@@ -1,0 +1,49 @@
+<html>
+<header>
+  <title>Select Demo</title>
+  <meta charset="utf-8" />
+  <link href="styles/common.css" rel="stylesheet" />
+  <link href="styles/header.css" rel="stylesheet" />
+  <link href="styles/menu.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+  <script src="dist/all.js"></script>
+</header>
+
+<body>
+  <select multiple data-title="Select 1">
+    <option value="1">[1] 89</option>
+    <option value="2" data-level="2">[2] 89.1</option>
+    <option value="3" data-level="2">[3] 89.2</option>
+    <option value="4" data-level="3">[4] 89.2.1</option>
+    <option value="5">[5] 90</option>
+    <option value="6">[6] 91</option>
+    <option value="7" data-level="2">[7] 91.1</option>
+    <option value="8" data-level="2">[8] 91.2</option>
+    <option value="9">[9] 92</option>
+  </select>
+
+  <select multiple data-title="Select 2">
+    <option value="1">2[1] 89</option>
+    <option selected value="2" data-level="2">2[2] 89.1</option>
+    <option value="3" data-level="2">2[3] 89.2</option>
+    <option value="4" data-level="3">2[4] 89.2.1</option>
+    <option value="5">2[5] 90</option>
+    <option value="6">2[6] 91</option>
+    <option value="7" data-level="2">2[7] 91.1</option>
+    <option selected value="8" data-level="2">2[8] 91.2</option>
+    <option value="9">2[9] 92</option>
+  </select>
+
+  <script>
+    require(["build-select"], function (bs) {
+      const selectElements = document.querySelectorAll("select");
+      const buildSelect = bs.buildSelect;
+
+      for (const select of Array.from(selectElements)) {
+        buildSelect(select);
+      }
+    })
+  </script>
+</body>
+
+</html>

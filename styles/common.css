@@ -26,3 +26,7 @@
     text-overflow: ellipsis;
     width: calc(100% - 40px);
 }
+
+.hidden {
+    display: none;
+}
